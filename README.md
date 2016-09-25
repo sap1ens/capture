@@ -6,17 +6,23 @@ Sharpening my Python skills. Using Flask, SQLAlchemy (with Postgres) and Celery 
 
 Run Redis:
 
-> docker run -p 6379:6379 -d redis
+```bash
+docker run -p 6379:6379 -d redis
+```
 
 Run celery:
 
-> celery -A tasks worker -l info
+```bash
+celery -A tasks worker -l info
+```
 
 Run Flask
 
-> export FLASK_DEBUG=1
-> export FLASK_APP=app.py
-> flask run
+```bash
+export FLASK_DEBUG=1
+export FLASK_APP=app.py
+flask run
+```
 
 ## TODO
 
