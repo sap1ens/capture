@@ -28,6 +28,6 @@ flask run
 
 - Implement background scheduler to retry failed `requested` and `in_progress` pages
 - Tests
-- API docs
+- API docs (+ RAML stuff)
 - UI?
 - ???
