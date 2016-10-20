@@ -4,6 +4,8 @@ Sharpening my Python skills. Using Flask, SQLAlchemy (with Postgres) and Celery 
 
 ## Dev
 
+Run Postgres (default options).
+
 Run Redis:
 
 ```bash
