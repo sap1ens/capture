@@ -34,4 +34,5 @@ flask run
 - Tests
 - API docs (+ RAML stuff)
 - UI?
+- Dockerize!
 - ???
