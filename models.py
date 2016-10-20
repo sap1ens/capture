@@ -41,11 +41,18 @@ def add(page):
     return page
 
 
-def get_all():
+def find_all():
     session = Session()
     results = session.query(Page).all()
 
-    return [(dict(row.as_dict())) for row in results]
+    return results
+
+
+def find_unprocessed():
+    session = Session()
+    results = session.query(Page).filter(Page.status != 'done', Page.status != 'in_progress')
+
+    return results
 
 
 def _update_status(page_id, status):

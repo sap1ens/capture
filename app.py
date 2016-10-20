@@ -12,7 +12,8 @@ app.config['APPLICATION_ROOT'] = API_ROOT
 
 @app.route('/pages')
 def show_pages():
-    pages = models.get_all()
+    pages = models.find_all()
+    pages = [row.as_dict() for row in pages]  # FIXME
 
     return jsonify(pages)
 

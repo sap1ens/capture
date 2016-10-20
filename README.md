@@ -15,7 +15,7 @@ docker run -p 6379:6379 -d redis
 Run celery:
 
 ```bash
-celery -A tasks worker -l info
+celery -B -A tasks worker -l info
 ```
 
 Run Flask
@@ -28,7 +28,9 @@ flask run
 
 ## TODO
 
-- Implement background scheduler to retry failed `requested` and `in_progress` pages
+- Find a way to convert Query objects in find_* methods to list of classes
+- Put `in_progress` tasks back to `requested` after timeout
+- Remove name field, generate it dynamically from title
 - Tests
 - API docs (+ RAML stuff)
 - UI?
