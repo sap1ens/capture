@@ -26,9 +26,7 @@ flask run
 
 ## TODO
 
-- Fix logging
-- Fix Celery -> sqlalchemy (session), use mark_as_done
-- Implement in_progress state
+- Fix logging (except Celery)
 - Implement background scheduler to retry failed `requested` and `in_progress` pages
 - Tests
 - API docs

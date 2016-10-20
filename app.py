@@ -22,12 +22,12 @@ def fetch_new_page():
     new_page = models.Page(
         title=request.json['title'],
         link=request.json['link'],
-        path=request.json['path']
+        name=request.json['name']
     )
 
     models.add(new_page)
 
-    tasks.fetch_page.apply_async((new_page.link, new_page.path), expires=30)
+    tasks.fetch_page.apply_async((new_page.id, new_page.link, new_page.name), expires=30)
 
     return jsonify(new_page.as_dict())
 
