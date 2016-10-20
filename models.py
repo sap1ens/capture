@@ -1,10 +1,15 @@
 import json
+import logging
 
 import settings
 from sqlalchemy import create_engine, Column, Integer, String, Text, Enum
 from sqlalchemy.engine.url import URL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+
+
+logging.basicConfig()
+logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
 Base = declarative_base()
 

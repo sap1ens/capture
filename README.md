@@ -26,7 +26,6 @@ flask run
 
 ## TODO
 
-- Fix logging (except Celery)
 - Implement background scheduler to retry failed `requested` and `in_progress` pages
 - Tests
 - API docs
